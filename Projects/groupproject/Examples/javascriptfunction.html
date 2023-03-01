@@ -4,12 +4,14 @@
 <head>
 <title>JavaScript Function</title>
 </head>
-<body>
+<body onload="myFunction(2);">
 <h1>myFunction(a) will call a JavaScript function without error, here's an example:</h1>
-  <p onload="myFunction(2);"></p>
+  <p id="paragraph"></p>
 <script>
 myFunction(a) {
-  return a * a;
+  var answer = a * a;
+  const paragraph = document.getElementById("paragraph");
+  paragraph.innerHTML = answer;
 }
 </script>
 </body>
